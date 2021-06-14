@@ -1,6 +1,6 @@
 /logs/
 /target/
-/var/
+#/var/
 /frontend/node_modules/
 /frontend/public/
 /.vscode/
