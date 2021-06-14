@@ -19,8 +19,9 @@ services:
         #  - "80:8080"
 
         environment:
-            - REMARK_URL
-            - SECRET
+#            - REMARK_URL=http://127.0.0.1:8080
+            - REMARK_URL=http://comments.ianjs.com:8080
+            - SECRET=123456
             - STORE_BOLT_PATH=/srv/var/db
             - BACKUP_PATH=/srv/var/backup
             - DEBUG=true
@@ -32,6 +33,7 @@ services:
             - AUTH_FACEBOOK_CSEC
             - AUTH_DISQUS_CID
             - AUTH_DISQUS_CSEC
+            - AUTH_ANON=true
             # - ADMIN_PASSWD=password
         volumes:
             - ./var:/srv/var
